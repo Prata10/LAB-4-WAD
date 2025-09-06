@@ -5,7 +5,8 @@
 ## **Overview** 
 This project creates an accessible registration form that dynamically generates profile cards 
 and a summary table. 
-What the webpage can do  
+
+##  What the webpage can do  
 This webpage allows users to enter their First name, Last Name, year and Program this 
 f
  ields are all required. The optional fields are interests and photo URL. There is a rest 
