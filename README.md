@@ -1,5 +1,6 @@
 
 **Student Name:**  Hernane Prata 
+---
 **Student Number:** 224027751 
 ## **Overview** 
 This project creates an accessible registration form that dynamically generates profile cards 
