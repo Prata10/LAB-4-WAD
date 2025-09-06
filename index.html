@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration → Profile Cards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1 color:white >Registration Form </h1>
+    <p class="lead">Add a profile to create cards and summary table</p>
+  </header>
+
+  <main class="grid" id="main">
+
+    <section aria-labelledby="formTitle">
+      <form id="regForm" novalidate>
+        <fieldset>
+          <legend id="formTitle" class="visually-hidden">Registration Form</legend>
+
+          <div class="form-row row">
+            <div class="col">
+              <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+              <input id="firstName" name="firstName" type="text" required minlength="2" aria-describedby="firstNameError">
+              <div id="firstNameError" class="error" aria-live="polite"></div>
+            </div>
+            <div class="col">
+              <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+              <input id="lastName" name="lastName" type="text" required minlength="2" aria-describedby="lastNameError">
+              <div id="lastNameError" class="error" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" required aria-describedby="emailError">
+            <div id="emailError" class="error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="programme">Programme <span aria-hidden="true">*</span></label>
+            <input id="programme" name="programme" type="text" required aria-describedby="programmeError">
+            <div id="programmeError" class="error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="year">Year <span aria-hidden="true">*</span></label>
+            <select id="year" name="year" required aria-describedby="yearError">
+              <option value="">Select Year</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <div id="yearError" class="error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="interests">Interests</label>
+            <textarea id="interests" name="interests" rows="3" aria-describedby="interestsError"></textarea>
+            <div id="interestsError" class="error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="photo">Photo URL</label>
+            <input id="photo" name="photo" type="url" aria-describedby="photoError">
+            <div id="photoError" class="error" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row actions">
+            <button type="submit" id="submitBtn">Register</button>
+            <button type="button" id="resetBtn">Reset</button>
+            <div class="small muted" id="formLive" aria-live="polite"></div>
+          </div>
+
+          <div class="errors" id="errorSummary" aria-live="assertive" role="alert"></div>
+        </fieldset>
+      </form>
+    </section>
+
+
+    <aside aria-labelledby="panelTitle">
+      <div class="panel">
+        <h2 id="panelTitle">Profiles</h2>
+
+        <input type="text" id="search" placeholder="Search profiles…" aria-label="Search profiles">
+
+        <div class="cards" id="cards" aria-live="polite"></div>
+
+        <h3>Summary Table</h3>
+        <div class="table-container">
+          <table id="summaryTable" aria-describedby="panelTitle">
+            <thead>
+              <tr><th>#</th><th>Name</th><th>Email</th><th>Programme</th><th>Year</th><th>Actions</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </aside>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
