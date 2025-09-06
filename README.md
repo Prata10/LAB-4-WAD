@@ -13,7 +13,7 @@ button in case the user wants to delete the information they entered. If the inf
 the user entered is correct, then it’s displayed on  a summary table. 
 
 ## **Files**
-• index.html: HTML structure 
-• styles.css: Styling and layout 
-• script.js: Adds Functionality  
-• images:  Background image 
+1. index.html: HTML structure 
+2.styles.css: Styling and layout 
+3.script.js: Adds Functionality  
+4.images:  Background image 
